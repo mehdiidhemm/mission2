@@ -1,0 +1,69 @@
+.s1 {
+	border: 2px solid black;
+	height:1700px;
+	width:780px;
+	margin:auto;
+}
+
+
+body {
+	background-color:silver;
+}
+
+
+header {
+	height:350px;
+	width:780px;
+	border:1px solid black;
+}
+
+
+.d1{
+	height:350px;
+	width:780px;
+	border:1px solid black;
+}
+
+
+.s2 {
+	float:left;
+}
+
+
+.s3 {
+	float:right;
+}
+
+
+.s5 {
+	float:left;
+}
+
+
+.s6 {
+	float:right;
+}
+
+
+.d2 {
+	height:350px;
+	width:780px;
+	border:1px solid black;
+}
+
+
+.s8 {
+	float:left;
+}
+
+
+.s9 {
+	float:right;
+}
+
+
+.d3 {
+	height:350px;
+	width:780px;
+	border:1px solid black;
+}
