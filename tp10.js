@@ -107,6 +107,24 @@ function seconnecter3(){
     }
 
 
-function bonus(){
+function bonus() {
+    var affich1 = "";
+    var somme_tot = 0;
+    do {
+        var article = prompt("Votre article");
+        var prix = prompt("Le prix");
+        var quantite = prompt("La quantité");
+        var somme = (Number(prix) * Number(quantite));
+        somme_tot += somme;
+        alert("Vos " + article + " coûteront " + somme + " €");
+        affich1 += ("Article : " + article + "<br> Prix : " + prix + "€" + "<br> Quantité : " + quantite + "<br> Total : " + somme + " € " + "<br><br><br>");
+        alert("Vos articles additionnés coûteront " + somme_tot + " €");
+        var suite = prompt("Voulez-vous continuer (OUI/STOP) ?")
+    }while(suite == "OUI");
+    if (suite == "STOP") {
+        document.write(affich1);
+        document.write("Prix total : " + somme_tot + " €");
+
+    }
 
 }
