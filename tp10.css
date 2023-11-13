@@ -1,0 +1,46 @@
+body{
+    background-color: rgb(100, 161, 161);
+}
+
+h1{
+ font-family: Verdana, Geneva, Tahoma, sans-serif;
+ color: aliceblue;
+}
+button{
+    width: 200px;
+    height: 100px;
+    background-color: yellow;
+    border: 2px solid white;
+    border-radius: 20px;
+    box-shadow: #003057 4px 4px 0 0;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 27px;
+    line-height: 50px;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    color: BLACK;
+    transition: 0.2s;
+    margin: 10px;
+    padding: 0 18px;
+}
+
+
+
+
+button:hover{
+    background-color: white; 
+    border: 2px solid rgb(183, 77, 77);
+    color: black;
+    transition: 150ms;
+}
+
+#container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 50px auto;
+    border: 1px solid #f1f1f1;
+}
