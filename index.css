@@ -53,4 +53,10 @@ li.dropdown {
 body {
   background-image: url("https://24.media.tumblr.com/9ca90f560b39f90e3bce8b2881597f13/tumblr_n6hr7sAgpp1sijhkdo1_500.gif");
   text-align: center;
+  background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family:Verdana, Calibri , sans-serif;
+    margin: 0px;
+    padding: 0px;
 }
