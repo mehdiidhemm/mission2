@@ -136,3 +136,34 @@ function f3(){
     let b=Math.floor(Math.random()*256);
     let color="rgb("+r+","+g+","+b+")";
     document.body.style.background=color;}
+function valide(){
+  string_box = document.getElementById("chaine");
+  char_box = document.getElementById("caractere");
+  if(string_box.value == "" || char_box.value == "") return;
+  if(char_box.value.length > 1) return;
+
+  alert(`La chaine de caractère [${string_box.value}] à longueur ${string_box.value.length} les chaine de caractère ayant une majucule ${string_box.value.toUpperCase()} le caractère [${char_box.value}] apparait ${string_box.value.count(char_box.value)}`);
+}
+function recherche(){
+    console.log("entrer");
+  string_box = document.getElementById("chaine");
+  string_box2 = document.getElementById("chaine2");
+  if(string_box.value == "" || string_box2.value == "") return;
+  console.log("entrer");
+  alert(`Le caractère est [${string_box.value}] contient la sous-chaîne [${string_box2.value}] ${countSubstrings(string_box.value, string_box2.value)}`);
+}
+String.prototype.count=function(c) {
+    var result = 0, i = 0;
+    for(i;i<this.length;i++)if(this[i]==c)result++;
+    return result;
+  };
+  
+  const countSubstrings = (str, searchValue) => {
+    let count = 0,
+      i = 0;
+    while (true) {
+      const r = str.indexOf(searchValue, i);
+      if (r !== -1) [count, i] = [count + 1, r + 1];
+      else return count;
+    }
+  };
