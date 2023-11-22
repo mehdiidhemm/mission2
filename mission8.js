@@ -166,4 +166,35 @@ String.prototype.count=function(c) {
       if (r !== -1) [count, i] = [count + 1, r + 1];
       else return count;
     }
-  };
+  
+function tp8site() { window.location.href = "tp8.html" }
+
+function tp8() {
+    var txt = document.getElementById("t1").value;
+    var char = document.getElementById("t2").value;
+    let l = txt.length;
+    let lchar = char.length;
+    let uptxt = txt.toUpperCase();
+    var mat = new RegExp(char, 'gi');
+    let res = txt.match(mat);
+    let le = res.length;
+    if (l >= 1) {
+        if (lchar == 1) { alert("La chaîne de caractères fait "+ l+ " caractères, renvoie "+ uptxt+ " en majuscules et possède le caractère "+ char+ " "+ le+ " fois."); }
+        else { alert("Entrez un caractère valide"); }
+    }
+    else { alert("Entrez une chaîne de caractères valide"); }
+}
+
+function tp8recherche() {
+    var txt = document.getElementById("t1").value;;
+    var str = document.getElementById("t3").value;
+    let l = txt.length;
+    let lstr = str.length;
+    var mat = new RegExp(str, 'gi');
+    let res = txt.match(mat);
+    let le = res.length;
+    if (l >= 1) {
+        if (lstr >= 2) {
+            alert("La chaîne " + str + " se trouve " + le + " fois dans " + txt + ".")}
+        else { alert("Donnez une chaîne de caractères à rechercher")}}
+    else {alert("Donnez une chaîne de caractères valide")}}
