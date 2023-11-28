@@ -1,0 +1,86 @@
+header{
+    border:  solid 3pxpx;
+    background-color: black skyblue;
+    border-radius: 5px;
+    height: 190px;
+}
+div#menugauche{
+    float: left;
+    margin-left: 25px;
+
+}
+div#menudroite{
+    float: right;
+    margin-right: 25px;
+
+    
+}
+div#divmenugauche{
+    float: left;
+    width: 900px;
+}
+div#divmenudroite{
+    float: left;
+    width: 900px;
+}
+table{
+    border: solid 2px;
+    width: 1950px;
+    margin-left: 9px;
+    margin-top: 24px;
+}
+th,td{
+    border: solid 3px;
+}
+div#remarques{
+    border: solid 3px;
+    text-align: center;
+    
+}
+div#button{
+    margin-left: 810px;
+}
+input.nom{
+    border: none;
+}
+input.quantite{
+    border: none;
+}
+input.prix{
+    border: none;
+}
+input.total{
+    border: none;
+}
+div#totals{
+    border: solid 1px;
+    text-align: center;
+    margin-top: 20px;
+    background-color: green;
+}
+button{
+    border-radius: 5px;
+    color: white;
+    background-color: black;
+    padding: 5px;
+}
+button:hover{
+    cursor: pointer;
+    color: black ghostwhite;
+    background-color: white red;
+
+}
+body{
+    background-color:lightskyblue;
+}
+
+button {
+background-color: #04AA6D; /* Green */
+border: none;
+color: white;
+padding: 15px 32px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+}
