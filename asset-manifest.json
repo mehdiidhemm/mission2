@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/mission2/static/css/main.775835eb.css",
+    "main.js": "/mission2/static/js/main.dc15249e.js",
+    "index.html": "/mission2/index.html",
+    "main.775835eb.css.map": "/mission2/static/css/main.775835eb.css.map",
+    "main.dc15249e.js.map": "/mission2/static/js/main.dc15249e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.775835eb.css",
+    "static/js/main.dc15249e.js"
+  ]
+}
