@@ -1,0 +1,370 @@
+
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    background: #f8f9fa;
+    color: #333;
+  }
+  
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    background: #343a40;
+    padding: 1rem 0;
+  }
+  .navbar a {
+    color: #f8f9fa;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .navbar a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Conteneur principal */
+  .container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  
+  /* Titres */
+  h2 {
+    margin-bottom: 0.5rem;
+    color: #212529;
+  }
+  
+  /* Listes */
+  ul {
+    list-style: disc inside;
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+  } 
+
+
+  
+  
+  
+  /* Filtre sombre pour le contraste */
+  body::before {
+    content: "";
+    position: fixed;
+    top:0; left:0; right:0; bottom:0;
+    background: rgba(0,0,0,0.4);
+    z-index: -1;
+  }
+  
+  /* Navbar */
+  .navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    background: rgba(52, 58, 64, 0.8);
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  .navbar a {
+    color: #f8f9fa;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .navbar a:hover {
+    text-decoration: underline;
+  }dre
+  
+  /* Container */
+  .container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: rgba(255,255,255,0.9);
+    border-radius: 8px;
+  }
+  
+  /* Galerie de projets */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    gap: 1rem;
+  }
+  .project-card {
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform .2s;
+  }
+  .project-card:hover {
+    transform: translateY(-4px);
+  }
+  .project-card img {
+    width: 100%;
+    display: block;
+  }
+  .project-card h3 {
+    margin: .5rem;
+    font-size: 1.1rem;
+  }
+  .project-desc {
+    padding: .5rem 1rem 1rem;
+    font-size: .95rem;
+    color: #555;
+  }
+  
+  /* Responsive mobile small */
+  @media (max-width: 600px) {
+    .navbar {
+      flex-direction: column;
+      gap: .5rem;
+    }
+  }
+
+
+
+.veil-overlay {
+  background: rgba(0,0,0,0.6);
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  color: #fff;
+  max-width: 800px;
+}
+.veil-overlay h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+.veil-overlay p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+/* Cartes concepts (réutilise .project-card) */
+.concept-card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform .2s;
+}
+.concept-card:hover {
+  transform: translateY(-4px);
+}
+.concept-card h4 {
+  margin-bottom: 0.5rem;
+  color: #212529;
+}
+
+/* Applications */
+.applications {
+  margin: 2rem 0 4rem;
+}
+.applications ul {
+  list-style: disc inside;
+  margin-left: 1rem;
+  line-height: 1.6;
+}
+
+/* Responsive : cartes sous forme de liste sur petit écran */
+@media (max-width: 600px) {
+  .concepts-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* === Lightbox pour agrandir l’image === */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  cursor: zoom-out;
+}
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+/* === Scroll dans les images de projets === */
+.project-images {
+  max-height: 300px;      /* Hauteur max du conteneur d’images */
+  overflow-y: auto;       /* Active le scroll vertical */
+  padding-right: 0.5rem;  /* Pour éviter que la scrollbar ne masque le contenu */
+  margin-top: 1rem;
+}
+
+/* Facultatif : style de la scrollbar (WebKit) */
+.project-images::-webkit-scrollbar {
+  width: 8px;
+}
+.project-images::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,0.2);
+  border-radius: 4px;
+}
+.project-images img {
+  display: block;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+/* Nav dynamique */
+.navbar {
+  display: flex;
+  justify-content: center;
+  background: #343a40;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-item {
+  position: relative;
+  margin: 0 1rem;
+  color: #f8f9fa;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.2s ease;
+}
+.nav-item:hover {
+  color: #ffd54f;
+}
+/* underline animé */
+.nav-item::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: #ffd54f;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+.nav-item:hover::after,
+.nav-item.active::after {
+  width: 100%;
+  left: 0;
+}
+
+/* NavLink applique la classe active automatiquement */
+.nav-item.active {
+  color: #ffd54f;
+}
+/* Grille de stages */
+.stages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+/* Carte de stage */
+.stage-card {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Image de stage */
+.stage-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* Contenu texte */
+.stage-content {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.stage-content h3 {
+  margin-bottom: 0.5rem;
+}
+.stage-content p {
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+/* Détails du stage */
+.stage-details {
+  margin-top: 1rem;
+  list-style: disc inside;
+  line-height: 1.5;
+}
+
+/* Responsive : empiler sur mobile */
+@media (max-width: 600px) {
+  .stages-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.accordion {
+  max-width: 900px;
+  margin: 2rem auto;
+  background: rgba(255,255,255,0.95);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.accordion-item + .accordion-item {
+  border-top: 1px solid #ddd;
+}
+.accordion-header {
+  width: 100%;
+  padding: 1rem;
+  background: #f0f0f0;
+  border: none;
+  text-align: left;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.accordion-header.open {
+  background: #e2e2e2;
+}
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  background: #fff;
+  padding: 0 1rem;
+}
+/* === Scroll dans l’accordion ouvert === */
+.accordion-content.open {
+  max-height: 400px;      /* limite la hauteur affichée */
+  overflow-y: auto;       /* ajoute une barre de défilement */
+  padding: 1rem;          /* remet le padding */
+}
+
+.icon {
+  font-size: 1.5rem;
+}
+
+
+
+
+  
+  
+  
